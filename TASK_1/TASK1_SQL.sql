@@ -123,18 +123,26 @@ INSERT INTO Category (name, description) VALUES
 ('Clothing','Apparel and accessories'),
 ('Home','Home & Kitchen');
 
+SELECT *FROM  Category;
+
 INSERT INTO Product (category_id, name, description, price, stock, sku) VALUES
 (1,'Smartphone X','Latest smartphone',699.00,50,'SPX-001'),
 (1,'Wireless Earbuds','Bluetooth earbuds',49.99,200,'EB-101'),
 (2,'Plain T-Shirt','Cotton t-shirt',9.99,150,'TSH-001');
 
+SELECT *FROM Product;
+
 INSERT INTO Customer (first_name,last_name,email,password_hash,phone) VALUES
 ('Rahul','K','rahul.k@example.com','$2y$...hash','9876543210'),
 ('Priya','S','priya.s@example.com','$2y$...hash','9123456789');
 
+SELECT *FROM Customer;
+
 INSERT INTO Address (customer_id,address_line1,city,state,postal_code,country,is_default) VALUES
 (1,'12 MG Road','Mumbai','Maharashtra','400001','India',TRUE),
 (2,'45 Park Street','Kolkata','West Bengal','700016','India',TRUE);
+
+SELECT *FROM Address;
 
 -- Create a sample order
 INSERT INTO `Order` (customer_id,address_id,status,total_amount) VALUES
